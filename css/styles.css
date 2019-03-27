@@ -1,0 +1,709 @@
+/*general styles*/
+html,
+body {
+    min-height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+body,
+body a,
+.memb-quote .blockquote-footer,
+.serv-image {
+    color: #1b1b1c !important;
+}
+
+body a:hover {
+    text-decoration: none;
+}
+
+.block-container {
+    margin-top: 4rem;
+    padding-bottom: 1.5rem;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Roboto', sans-serif;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1.125rem;
+}
+
+img {
+    width: 100%;
+}
+
+.heading-line {
+    border-top: 1px solid #1b1b1c;
+    margin: 0 auto;
+}
+
+.h-line-top {
+    width: 40%;
+}
+
+.h-line-bottom {
+    width: 60%;
+}
+
+.h-line-small {
+    width: 20%;
+}
+
+.line-w-80 {
+    width: 80%;
+}
+
+.client-info,
+.serv-image .figcaption h5,
+.figcap-text h5,
+.memb-name,
+.blockquote,
+.header-info p {
+    font-family: 'Slabo', serif;
+}
+
+.figcap-text .socials li a,
+footer.footer li a,
+.copyright {
+    color: #fff !important;
+}
+
+
+.figcap-text .socials li:hover a,
+footer.footer li:hover a {
+    color: #c9c1c1 !important;
+}
+
+
+button:focus,
+a:focus {
+    outline: 0;
+}
+
+/*buttons*/
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    font-size: 40px;
+    display: none;
+}
+
+.back-to-top:hover {
+    color: #655d5d !important;
+}
+
+.btn-cstm {
+    text-transform: uppercase;
+    text-align: center;
+    width: 10rem;
+    padding: .5rem 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 1.25rem;
+    cursor: pointer;
+    margin: 0 auto;
+    position: relative;
+}
+
+.btn-cstm:before {
+    position: absolute;
+    border: 1px solid #1b1b1c;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.btn-cstm:hover::before {
+    opacity: 0;
+    transform: scale(0);
+}
+
+/*hover effect for images*/
+.figcap-text .heading-line {
+    border-color: #fff;
+}
+
+.img-hover-effect {
+    position: relative;
+}
+
+.port-image a,
+.img-hover-effect .figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.img-hover-effect .figcaption {
+    padding: 2rem;
+}
+
+.img-hover-effect .figcap-text {
+    color: #fff;
+    position: absolute;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: scale(1) translate(-50%, -50%);
+    opacity: 1;
+}
+
+.img-hover-effect .figcaption::before {
+    transform: scale(0);
+}
+
+.img-hover-effect .figcaption::before,
+.img-hover-effect .figcap-text {
+    opacity: 0;
+    transition: opacity 0.35s, transform 0.35s;
+
+}
+
+.img-hover-effect .figcaption::before {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    left: 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    content: '';
+}
+
+.img-hover-effect:hover .figcap-text {
+    opacity: 1;
+    transform: scale(1) translate(-50% -50%);
+}
+
+.img-hover-effect:hover .figcaption::before {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+/*header*/
+
+header {
+    background: url("../images/header-bg-lg.jpg") no-repeat center;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+header .container {
+    padding: 3rem 2rem 2rem;
+}
+
+nav {
+    margin-bottom: 2rem;
+    font: 1rem 'Roboto', sans-serif;
+    z-index: 4;
+}
+
+.navbar {
+    padding-top: 0;
+    padding-bottom: .25rem;
+}
+
+.navbar-nav {
+    margin-top: -10px;
+}
+
+nav a {
+    color: #343a40;
+    font-weight: 500;
+}
+
+nav .current a {
+    font-weight: 700;
+}
+
+nav li:hover a {
+    color: #655d5d !important;
+}
+
+.header-info-container {
+    padding: 7rem 0 5rem;
+}
+
+.header-info-container h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+}
+
+.header-info-container p {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+}
+
+/*services*/
+
+.serv-image {
+    width: 30%;
+}
+
+.serv-image .figcaption {
+    margin: 2rem 0;
+}
+
+/*portfolio*/
+
+.port-image {
+    margin-bottom: 2rem;
+}
+
+.client-info {
+    margin: auto auto 0 auto;
+    text-align: center;
+}
+
+.client-info p {
+    margin: 0;
+}
+
+.reviews .card-text {
+    margin: 2rem 0 1rem;
+}
+
+
+/*about*/
+
+.memb-info {
+    padding: 0 2rem;
+}
+
+.memb-name {
+    font-size: 1.5rem;
+}
+
+.memb-quote .blockquote-footer {
+    font-size: inherit;
+    text-align: right;
+}
+
+#about .figcap-text {
+    width: 50%;
+}
+
+/*recent blog posts*/
+
+h4.card-title {
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+.post-info {
+    color: #655d5d;
+}
+
+.recent-post {
+    padding: .5rem .5rem 5rem;
+}
+
+.card-img-top {
+    padding: 0;
+}
+
+/*footer*/
+
+footer.footer {
+    background: url("../images/footer-bg-lg.jpg") no-repeat center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    content: '';
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.footer-nav {
+    padding: 7rem 0 8rem;
+}
+
+footer ul li,
+.socials li {
+    list-style-type: none;
+}
+
+footer.footer li a,
+.copyright {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+.copyright {
+    font-size: .875rem;
+    padding-bottom: 4rem;
+}
+
+.socials {
+    font-size: 1.25rem;
+}
+
+/*modal*/
+.modal-content {
+    border-radius: 0;
+    padding: 2rem 5rem 3rem;
+}
+
+#cstm-modal {
+    max-width: 600px;
+}
+
+#cstm-modal input,
+#cstm-modal textarea {
+    border: 1px solid #1b1b1c;
+    border-radius: 0;
+}
+
+#cstm-modal textarea {
+    resize: none;
+}
+
+#cstm-modal button.close {
+    font-size: 3.2rem;
+    top: -0.5rem;
+    right: .2rem;
+}
+
+
+#cstm-modal .form-group {
+    margin-bottom: 0.5rem;
+}
+
+#cstm-modal .form-control:focus {
+    box-shadow: 0 0 0 .2rem rgba(134, 138, 143, 0.3);
+}
+
+/*hamburger menu button*/
+.menu-btn,
+.menu-btn .menu-icon,
+.menu-btn.open .menu-icon,
+.menu-btn .menu-icon::before,
+.menu-btn .menu-icon::after {
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+
+.menu-btn .menu-icon,
+.menu-btn .menu-icon::before,
+.menu-btn .menu-icon::after {
+    background-color: #1b1b1c;
+}
+
+.menu-btn {
+    width: 40px;
+    height: 40px;
+    top: 10px;
+    left: 30px;
+}
+
+.menu-btn .menu-icon {
+    height: 6px;
+    width: 40px;
+    top: 20px;
+    left: 0;
+}
+
+.menu-btn.open .menu-icon {
+    background: transparent;
+}
+
+.menu-btn.open .menu-icon::before {
+    -webkit-transform: rotateZ(45deg) translate(10px, 10px);
+    -moz-transform: rotateZ(45deg) translate(10px, 10px);
+    -ms-transform: rotateZ(45deg) translate(10px, 10px);
+    -o-transform: rotateZ(45deg) translate(10px, 10px);
+    transform: rotateZ(45deg) translate(10px, 10px);
+}
+
+.menu-btn .menu-icon::before {
+    position: absolute;
+    width: 40px;
+    height: 6px;
+    content: "";
+    top: -12px;
+    left: 0;
+}
+
+.menu-btn.open .menu-icon::after {
+    -webkit-transform: rotateZ(-45deg) translate(7px, -7px);
+    -moz-transform: rotateZ(-45deg) translate(7px, -7px);
+    -ms-transform: rotateZ(-45deg) translate(7px, -7px);
+    -o-transform: rotateZ(-45deg) translate(7px, -7px);
+    transform: rotateZ(-45deg) translate(7px, -7px);
+}
+
+.menu-btn .menu-icon::after {
+    position: absolute;
+    width: 40px;
+    height: 6px;
+    content: "";
+    top: 12px;
+    left: 0;
+}
+
+
+/*media queries*/
+
+@media (max-width: 991.98px) {
+
+    /*mobile navigation */
+    .navbar-collapse {
+        position: absolute;
+        top: 62px;
+        left: 0;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+        width: 100%;
+    }
+
+    .navbar-collapse.collapsing {
+        height: auto;
+        -webkit-transition: left 0.3s ease;
+        -o-transition: left 0.3s ease;
+        -moz-transition: left 0.3s ease;
+        transition: left 0.3s ease;
+        left: -100%;
+    }
+
+    .navbar-collapse.show {
+        left: 0;
+        -webkit-transition: left 0.3s ease-in;
+        -o-transition: left 0.3s ease-in;
+        -moz-transition: left 0.3s ease-in;
+        transition: left .3s ease-in;
+        -webkit-transition-delay: 0s;
+        -moz-transition-delay: 0s;
+        -o-transition-delay: 0s;
+        transition-delay: 0s;
+    }
+
+    nav.navbar {
+        width: 100%;
+        margin-bottom: 0;
+        position: absolute;
+        padding: 15px 0 0;
+        z-index: 30;
+    }
+
+    .nav-bg {
+        top: 0;
+        left: -100%;
+        right: 100%;
+        bottom: 0;
+        z-index: 30;
+        -webkit-transition: right 0.3s ease-in;
+        -o-transition: right 0.3s ease-in;
+        -moz-transition: right 0.3s ease-in;
+        transition: right .3s ease-in;
+
+    }
+
+    .navbg-move {
+        right: 0 !important;
+        -webkit-transition-delay: .3s;
+        -moz-transition-delay: .3s;
+        -o-transition-delay: .3s;
+        transition-delay: .3s;
+    }
+
+
+    nav li:hover a {
+        color: #343a40 !important;
+    }
+
+    nav .navbar-nav li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav .navbar-nav li:last-child {
+        border-bottom: none;
+    }
+
+    .navbar-toggler-icon {
+        font-size: 2.5rem;
+    }
+
+    /*end mobile navigation*/
+    body .container {
+        max-width: none;
+        width: 100%;
+    }
+
+    header {
+        background: url("../images/header-bg-md.jpg") no-repeat center;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+
+    .header-info-container {
+        width: auto;
+        padding: 5rem 2rem;
+    }
+
+    .btn-cstm:hover::before {
+        opacity: 1;
+        transform: none;
+    }
+
+    .serv-image {
+        width: 40%;
+    }
+
+    .port-image {
+        width: 51%;
+        margin: 0 auto;
+    }
+
+    #portfolio .img-hover-effect .figcaption {
+        display: none;
+    }
+
+    #portfolio .img-hover-effect .figcap-text {
+        position: static;
+        transform: scale(1);
+        margin: 2rem 0;
+        color: #1b1b1c;
+    }
+
+    #portfolio .img-hover-effect .figcap-text .heading-line {
+        display: none;
+    }
+
+    .img-hover-effect .figcap-text {
+        opacity: 1;
+        width: 100%;
+        transition: none;
+    }
+
+    .reviews {
+        margin-top: 1rem;
+    }
+
+    .client-info {
+        margin-bottom: 2rem;
+    }
+
+    #about .figcaption::before {
+        opacity: 0;
+    }
+
+    #about .figcap-text {
+        padding: .5rem;
+    }
+
+    #about .figcap-text .heading-line {
+        border-color: #000 !important;
+    }
+
+    #about .figcap-text .socials li a {
+        color: #000 !important;
+    }
+
+    #about .img-hover-effect .figcap-text,
+    #about .img-hover-effect .figcaption {
+        top: auto;
+        bottom: 10%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        opacity: 1;
+    }
+
+    #about .img-hover-effect .figcaption {
+        width: 100%;
+        height: auto;
+        background-color: rgba(255, 255, 255, 0.4);
+    }
+
+    .recent-post {
+        padding-top: 1.25rem;
+    }
+
+    footer.footer {
+        background: url("../images/footer-bg-md.jpg") no-repeat center;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+
+    .footer-nav .row {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 767.98px) {
+
+    .header-info-container h2 {
+        font-size: 2.25rem;
+    }
+
+    .cstm-container {
+        padding: 0 1.5rem;
+    }
+
+    .serv-image {
+        width: auto;
+        margin: 0 auto 2rem auto !important;
+    }
+
+    .serv-image:nth-child(even) {
+        padding-left: 10px;
+    }
+
+    .port-image {
+        width: auto;
+    }
+
+    blockquote p {
+        text-align: left;
+    }
+
+    header {
+        background: url("../images/header-bg-sm.jpg") no-repeat center;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+
+    footer.footer {
+        background: url("../images/footer-bg-sm.jpg") no-repeat center;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+
+    .modal-content {
+        padding: 2rem 2rem 6rem;
+    }
+}
+
+
